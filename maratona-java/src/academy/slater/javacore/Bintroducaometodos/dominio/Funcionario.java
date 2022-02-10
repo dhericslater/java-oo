@@ -1,28 +1,64 @@
 package academy.slater.javacore.Bintroducaometodos.dominio;
 
 public class Funcionario {
-	String nome = "Dhéric Slater";
-	int idade = 18;
-	double[] salario = {2420, 3300, 2940};
+	private String nome;
+	private int idade;
+	private double[] salarios;
+	private double media;
+
+	public String getNome() {
+		return nome;
+	}
 	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	public double[] getSalarios() {
+		return salarios;
+	}
+
+	public void setSalarios(double[] salarios) {
+		this.salarios = salarios;
+	}
+
+	public double getMedia() {
+		return media;
+	}
+
 	public void imprimeDados() {
 		System.out.println("===================");
-		
+
 		System.out.println(this.nome);
 		System.out.println(this.idade);
-		for(int i = 0; i < salario.length; i++) {
-			System.out.println(salario[i]);
+		if(salarios == null) {
+			return;
 		}
+		for (double salario : salarios) {
+			System.out.print(salario + " ");
+		}
+
+		imprimeMediaSalario();
 	}
-	
+
 	public void imprimeMediaSalario() {
-		double soma = 0;
-		for(int i = 0; i < salario.length; i++) {
-			double pega =+ salario[i];
-			soma = pega + soma;
-			}
-		System.out.println(soma/salario.length);
-		
+		if(salarios == null) {
+			return;
+		}
+
+		for(double salario : salarios) {
+			media += salario;
+		}
+		media /= salarios.length;
+		System.out.println("\nMédia Salarial: " + media);
 	}
-	
+
 }

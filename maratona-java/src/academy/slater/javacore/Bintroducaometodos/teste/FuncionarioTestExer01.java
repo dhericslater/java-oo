@@ -7,12 +7,13 @@ public class FuncionarioTestExer01 {
 	public static void main(String[] args) {
 		Funcionario funcionario = new Funcionario();
 		
+		funcionario.setNome("Slater");
+		funcionario.setIdade(22);
+		funcionario.setSalarios(new double[]{1900, 2200, 3450});
+		
 		funcionario.imprimeDados();
-		
-		System.out.println("-----------------------------");
-		
-		funcionario.imprimeMediaSalario();
 
 	}
 
 }
+	
