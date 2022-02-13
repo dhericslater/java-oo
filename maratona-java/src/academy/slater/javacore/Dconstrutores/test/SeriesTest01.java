@@ -3,7 +3,7 @@ package academy.slater.javacore.Dconstrutores.test;
 import academy.slater.javacore.Dconstrutores.dominio.Series;
 
 
-public class AnimeTest01 {
+public class SeriesTest01 {
 
 	public static void main(String[] args) {
 
